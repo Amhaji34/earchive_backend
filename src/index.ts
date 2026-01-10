@@ -3,9 +3,12 @@ import cors from 'cors';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 // Mock database for documents
 let documents: any[] = [];
